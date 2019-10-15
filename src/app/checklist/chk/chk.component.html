@@ -1,0 +1,36 @@
+
+<div class="row">
+  <div class="col-xs-10">
+
+    <hr>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Task</th>
+          <th scope="col">Description</th>
+          <th scope="col">Schedule</th>
+          <th scope="col">Delete</th>
+         
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let chk of dispchecklist; let i=index">
+          <td>{{i+1}}</td>
+         
+          <td>{{chk.taskname}}</td>
+          <td>{{chk.taskDescription}}</td>
+          <td>{{chk.Schedule |  date:'dd/MMM/yyyy'}}</td>
+          <td><button type="button" (click)="deleteRecord(i)" class="btn btn-red">Delete Record</button></td>
+          <td><button type="button" (click)="updateRecord(i)" class="btn btn-yellow">Update Record</button></td>
+         
+        </tr>
+      
+      </tbody>
+    </table>
+   
+     
+      
+   
+  </div>
+</div>

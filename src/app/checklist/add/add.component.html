@@ -1,0 +1,32 @@
+<div class="row">
+  <div class="col-xs-10">
+
+    <hr>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Task</th>
+          <th scope="col">Description</th>
+          <th scope="col">Schedule</th>
+          <th scope="col">Submit</th>
+         
+        </tr>
+      </thead>
+      <tbody>
+        <tr >
+        
+         <td> <input type="text" class="form-control" id="taskname" name="taskname"   [(ngModel)]="taskname" required ></td>
+          
+          <td><textarea class="form-control rounded-0" id="exampleFormControlTextarea1" id="taskdescription"  [(ngModel)]="taskdescription" name="taskdescription" rows="12" ></textarea></td>
+          <td> <input type='text' class="form-control" type="date" id="taskdate" name="taskdate"  [(ngModel)]="taskdate" required   /></td>
+         
+          
+         
+          <td>  
+            <button class="btn btn-primary" type="submit" (click)="onSubmit(taskname,taskdescription,taskdate)">Submit</button>
+         </td>
+        
+        </tr>
+      
+      </tbody>
+    </table>
